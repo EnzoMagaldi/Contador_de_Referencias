@@ -1,6 +1,13 @@
-#include "contref.h"
+#include <stdio.h>
+#include <stdlib.h>
 
-// Função para alocar memória e registrar a alocação
+#define MAX_ALLOC 1024  // Número máximo de alocações suportadas
+
+// Vetores para armazenar os ponteiros alocados e a contagem de referências
+void* memoria[MAX_ALLOC];
+int cont_ref[MAX_ALLOC];
+int cont_alloc=0;
+
 void* malloc2(size_t size){
     if (cont_alloc >= MAX_ALLOC){
         printf("Erro: Número máximo de alocações atingido.\n");
