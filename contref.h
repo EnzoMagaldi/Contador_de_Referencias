@@ -47,7 +47,7 @@ void liberar_bloco(int indice) {
 void atrib2(void *pont1, void *pont2) {
     //Caso não exista o primeiro ponteiro, é criado um novo 
     if(pont1==NULL){
-        malloc2(pont2);
+        malloc2(sizeof(pont2));
     }
     // Decrementa a referência do ponteiro antigo,
     else {
